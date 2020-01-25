@@ -1,0 +1,11 @@
+.page-selection {
+  display: flex;
+}
+
+.selection-wrapper {
+  max-width: 42em;
+}
+
+.selection {
+  margin: auto;
+}

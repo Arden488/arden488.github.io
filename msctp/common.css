@@ -1,0 +1,22 @@
+.page-heading {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.modal-content_transparent {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.modal-content_transparent .modal-footer {
+  border-color: transparent;
+  justify-content: center;
+}
+
+.modal-backdrop.show {
+  opacity: 0.8;
+}
+
+.modal-dialog {
+  max-width: 800px;
+}

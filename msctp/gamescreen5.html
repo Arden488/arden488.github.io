@@ -1,0 +1,218 @@
+<html>
+  <head>
+    <!-- Web page title -->
+    <title>Top Trumps</title>
+
+    <!-- Import JQuery, as it provides functions you will probably find useful (see https://jquery.com/) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.11.1/themes/flick/jquery-ui.css"
+    />
+
+    <!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
+    <script>
+      vex.defaultOptions.className = "vex-theme-os";
+    </script>
+    <link
+      rel="stylesheet"
+      href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./game.css" />
+  </head>
+
+  <body onload="initalize()">
+    <!-- Call the initalize method when the page loads -->
+
+    <div class="page-game">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="player-box">
+              <div class="pcard pcard_sm pcard_empty"></div>
+              <div class="player-info">
+                <div class="player-info__name">Player 1</div>
+                <div class="player-info__cards">
+                  <img
+                    class="player-info__cards-icon"
+                    src="images/icon-cards-pile.svg"
+                    alt=""
+                  />
+                  <span class="player-info__cards-count">15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="player-box">
+              <div class="pcard pcard_sm pcard_empty"></div>
+              <div class="player-info">
+                <div class="player-info__name">Player 2</div>
+                <div class="player-info__cards">
+                  <img
+                    class="player-info__cards-icon"
+                    src="images/icon-cards-pile.svg"
+                    alt=""
+                  />
+                  <span class="player-info__cards-count">15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="player-box">
+              <div class="pcard pcard_sm pcard_empty pcard_dead"></div>
+              <div class="player-info player-info_dead">
+                <div class="player-info__name">Player 3</div>
+                <div class="player-info__cards">
+                  <img
+                    class="player-info__cards-icon"
+                    src="images/icon-cards-pile.svg"
+                    alt=""
+                  />
+                  <span class="player-info__cards-count">15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="player-box">
+              <div class="pcard pcard_sm pcard_empty pcard_dead"></div>
+              <div class="player-info player-info_dead">
+                <div class="player-info__name">Player 4</div>
+                <div class="player-info__cards">
+                  <img
+                    class="player-info__cards-icon"
+                    src="images/icon-cards-pile.svg"
+                    alt=""
+                  />
+                  <span class="player-info__cards-count">15</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm d-flex">
+            <div class="game-status">
+              <div class="game-status__log">
+                <p class="lead">Round 1:</p>
+                <p>You are active player. Choose a category</p>
+              </div>
+
+              <div class="common-pile">
+                Common pile: 5 cards
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm">
+            <div class="player-box player-box_active player-box_self">
+              <div class="player-info">
+                <div class="player-info__name">You</div>
+                <div class="player-info__cards">
+                  <img
+                    class="player-info__cards-icon"
+                    src="images/icon-cards-pile.svg"
+                    alt=""
+                  />
+                  <span class="player-info__cards-count">15</span>
+                </div>
+              </div>
+              <div class="pcard pcard-sm">
+                <div class="pcard__image-box">
+                  <img
+                    class="pcard__image"
+                    src="https://placehold.it/200x150"
+                    alt=""
+                  />
+                </div>
+                <div class="pcard__content">
+                  <div class="pcard__title">Card title</div>
+                  <div class="pcard__chars">
+                    <div class="pcard__char">
+                      Size <span class="pcard__char-value">8</span>
+                    </div>
+                    <div class="pcard__char">
+                      Speed <span class="pcard__char-value">5</span>
+                    </div>
+                    <div class="pcard__char">
+                      Range <span class="pcard__char-value">6</span>
+                    </div>
+                    <div class="pcard__char">
+                      Firepower <span class="pcard__char-value">9</span>
+                    </div>
+                    <div class="pcard__char">
+                      Cargo <span class="pcard__char-value">10</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm d-flex">
+            <div class="action-box">
+              <div class="action-box__message">
+                <p>Choose category</p>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-block"
+                  disabled
+                >
+                  Size
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-block"
+                  disabled
+                >
+                  Speed
+                </button>
+                <button type="button" class="btn btn-block btn-primary">
+                  Range
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-block"
+                  disabled
+                >
+                  Firepower
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-block"
+                  disabled
+                >
+                  Cargo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

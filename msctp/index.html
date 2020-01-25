@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <!-- Web page title -->
+    <title>Top Trumps</title>
+
+    <!-- Import JQuery, as it provides functions you will probably find useful (see https://jquery.com/) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.11.1/themes/flick/jquery-ui.css"
+    />
+
+    <!-- Optional Styling of the Website, for the demo I used Bootstrap (see https://getbootstrap.com/docs/4.0/getting-started/introduction/) -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="http://dcs.gla.ac.uk/~richardm/vex.combined.min.js"></script>
+    <script>
+      vex.defaultOptions.className = "vex-theme-os";
+    </script>
+    <link
+      rel="stylesheet"
+      href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://dcs.gla.ac.uk/~richardm/assets/stylesheets/vex-theme-os.css"
+    />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./common.css" />
+    <link rel="stylesheet" href="./selection.css" />
+  </head>
+
+  <body onload="initalize()">
+    <!-- Call the initalize method when the page loads -->
+
+    <div class="container page-selection selection-wrapper text-center">
+      <div class="d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <main role="main" class="inner selection">
+          <h1 class="page-heading mb-5">TopTrumps</h1>
+          <p class="lead">
+            <a href="#" class="btn btn-lg p-3 pl-5 pr-5 btn-secondary"
+              >New game</a
+            >
+          </p>
+          <p class="lead">
+            <a href="#">Game statistics</a>
+          </p>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
